@@ -1,0 +1,20 @@
+{"usuarios":[
+    {
+        "nombre":"Jose Vicente",
+        "telefono":"53535",
+        "email":"info@josevicente.com",
+        "direccion":"La calle de Jose Vicente"
+    },
+    {
+        "nombre":"Juan",
+        "telefono":"53543",
+        "email":"info@juan.com",
+        "direccion":"La calle de Juan"
+    },
+    {
+        "nombre":"Jorge",
+        "telefono":"645646",
+        "email":"info@jorge.com",
+        "direccion":"La calle de Jorge"
+    }
+]}

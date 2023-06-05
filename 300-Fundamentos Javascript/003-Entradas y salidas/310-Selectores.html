@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <article>Artículo 1</article>
+        <article>Artículo 2</article>
+        <article>Artículo 3</article>
+        <section class='miseccion'>Sección 1</section>
+        <section class='miseccion'>Sección 2</section>
+        <section class='miseccion'>Sección 3</section>
+        <div id="mielemento">Este es mi elemento</div>
+        <script>
+            document.write("Este es un texto");
+            document.getElementById("mielemento").innerHTML = "Hola mundo"
+            var etiquetas = document.getElementsByTagName("article")
+            console.log(etiquetas.length)
+            var clases = document.getElementsByClassName("miseccion")
+            console.log(clases.length)
+        </script>
+    </body>
+</html>

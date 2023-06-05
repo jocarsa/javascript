@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+        <style>
+            canvas{border:1px solid black;}
+        </style>
+    </head>
+    <body>
+        <canvas id="lienzo" width=800 height=400></canvas>
+        <script>
+            var lienzo = document.getElementById("lienzo");
+            var contexto = lienzo.getContext("2d");
+            contexto.fillStyle = "red"
+            contexto.fillRect(10,10,20,20)
+        </script>
+    </body>
+</html>

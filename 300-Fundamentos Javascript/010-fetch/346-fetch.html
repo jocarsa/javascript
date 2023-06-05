@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+        <style>
+            #contenedor{
+                width:100%;
+                height:20px;
+                border:1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="contenedor"></div>
+        <button id="pulsame">Púlsame</button>
+        <script>
+            var boton = document.getElementById("pulsame")
+            boton.onclick = function(){
+                var contenedor = document.getElementById("contenedor")
+                contenedor.innerHTML = "hola"
+            }
+        </script>
+    </body>
+</html>

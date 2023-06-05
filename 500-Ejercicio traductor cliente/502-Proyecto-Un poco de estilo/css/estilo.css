@@ -1,0 +1,17 @@
+body,html{
+    background:grey;
+    font-family: sans-serif;
+    height:100%;
+}
+#contenedor{
+    background:white;
+    padding:20px;
+    margin:auto;
+    height:100%;
+    width:50%;
+}
+input{
+    width:100%;
+    padding-top:10px;
+    padding-bottom:10px;
+}

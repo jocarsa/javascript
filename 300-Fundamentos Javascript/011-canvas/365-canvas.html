@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+        <style>
+            canvas{border:1px solid black;}
+        </style>
+    </head>
+    <body>
+        <canvas id="lienzo" width=800 height=400></canvas>
+        <script>
+            var colores = ["red","green","blue","yellow","cyan","magenta","brown","orange"]
+            var mijson = {
+                "valores":[
+                    {"clave":"uno","valor":"15"},
+                    {"clave":"dos","valor":"253"},
+                    {"clave":"tres","valor":"353"},
+                    {"clave":"cuatro","valor":"354"},
+                    {"clave":"cinco","valor":"543"},
+                    {"clave":"seis","valor":"1345"}
+                ]
+            }
+            console.log(mijson)
+            var anchura = 800;
+            var altura = 400;
+            var lienzo = document.getElementById("lienzo");
+            var contexto = lienzo.getContext("2d");
+            contexto.fillStyle = "red";
+            
+            var radio = 150;
+            var longitudjson = mijson.valores.length
+            console.log(longitudjson)
+            var suma = 0;
+            for(let i = 0;i<longitudjson;i++){
+                suma += mijson.valores[i].valor*1
+            }
+            console.log(suma)
+            var ultimaposicion = 0;
+            for(let i = 0;i<longitudjson;i++){
+                let inicio = ultimaposicion;
+                let final = ultimaposicion+(mijson.valores[i].valor/suma)*Math.PI*2;
+                ultimaposicion = final
+                
+                contexto.fillStyle = colores[i]
+                contexto.beginPath();
+                contexto.moveTo(anchura/2,altura/2)
+                contexto.arc(
+                    anchura/2,
+                    altura/2,
+                    radio,
+                    inicio,
+                    final
+                );
+                contexto.lineTo(anchura/2,altura/2);
+                contexto.fill();
+                var angulomedio = inicio+(final-inicio)/2
+                contexto.strokeStyle = colores[i]
+                contexto.lineWidth = 5;
+                contexto.beginPath();
+                contexto.moveTo(anchura/2,altura/2);
+                contexto.lineTo(
+                    anchura/2+Math.cos(angulomedio)*radio*1.2,
+                    altura/2+Math.sin(angulomedio)*radio*1.2
+                )
+                if(angulomedio < Math.PI/2 || angulomedio > Math.PI*1.5){
+                    contexto.lineTo(
+                        600,
+                        altura/2+Math.sin(angulomedio)*radio*1.2
+                    )
+                    contexto.fillRect(
+                        590,
+                        altura/2+Math.sin(angulomedio)*radio*1.2-10,
+                        20,
+                        20
+                    );
+                    contexto.textAlign = "left"
+                    contexto.fillText(
+                        mijson.valores[i].clave+": "+mijson.valores[i].valor, 
+                        620, 
+                        altura/2+Math.sin(angulomedio)*radio*1.2+0);
+                }else{
+                    contexto.lineTo(
+                        200,
+                        altura/2+Math.sin(angulomedio)*radio*1.2
+                )
+                    contexto.fillRect(
+                        190,
+                        altura/2+Math.sin(angulomedio)*radio*1.2-10,
+                        20,
+                        20
+                    );
+                    contexto.textAlign = "right"
+                    contexto.fillText(
+                        mijson.valores[i].clave+": "+mijson.valores[i].valor, 
+                        180, 
+                        altura/2+Math.sin(angulomedio)*radio*1.2+0);
+                }
+                
+                contexto.stroke()
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            class Mamifero{
+                mama(){
+                    return "este animal mama cuando es pequeño";
+                }
+            }
+            class Gato extends Mamifero{
+                
+                constructor(){
+                    super()
+                    this.nombre = "";
+                    this.edad = 0;
+                }
+                maulla(){
+                    return "El gato está maullando<br>";
+                }
+                setEdad(nuevaedad){
+                    this.edad = nuevaedad
+                }
+                getEdad(){
+                    return this.edad
+                }
+            }
+            var micifu = new Gato();
+            document.write(micifu.maulla());
+            document.write("La edad del gato es: "+micifu.getEdad()+"<br>");
+            micifu.setEdad(1);
+            document.write("La edad del gato es: "+micifu.getEdad()+"<br>");
+            document.write(micifu.mama()+"<br>");
+            
+        </script>
+    </body>
+</html>

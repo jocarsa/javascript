@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+        <style>
+            canvas{border:1px solid black;}
+        </style>
+    </head>
+    <body>
+        <canvas id="lienzo" width=800 height=400></canvas>
+        <script>
+            var anchura = 800;
+            var altura = 400;
+            var lienzo = document.getElementById("lienzo");
+            var contexto = lienzo.getContext("2d");
+            contexto.fillStyle = "red";
+            contexto.fillRect(10,10,20,20);
+            var radio = 150;
+            for(let i = 0;i<50;i++){
+                let inicio = Math.random()*Math.PI*2;
+                let final = Math.random()*Math.PI*2;
+                let rojo = Math.round(Math.random()*255);
+                let verde = Math.round(Math.random()*255);
+                let azul = Math.round(Math.random()*255);
+                contexto.fillStyle = "rgb("+rojo+","+verde+","+azul+")"
+                contexto.beginPath();
+                contexto.moveTo(anchura/2,altura/2)
+                contexto.arc(
+                    anchura/2,
+                    altura/2,
+                    radio,
+                    inicio,
+                    final
+                );
+                contexto.lineTo(anchura/2,altura/2);
+                contexto.fill();
+            }
+        </script>
+    </body>
+</html>

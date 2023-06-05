@@ -1,0 +1,17 @@
+{"usuarios":[
+    {
+        "descripcion":"Producto numero 1",
+        "precio":"2",
+        "peso":"3"
+    },
+    {
+        "descripcion":"Producto numero 2",
+        "precio":"56",
+        "peso":"33"
+    },
+    {
+        "descripcion":"Producto numero 3",
+        "precio":"42",
+        "peso":"33"
+    }
+]}

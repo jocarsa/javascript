@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+        <style>
+            canvas{border:1px solid black;}
+        </style>
+    </head>
+    <body>
+        <canvas id="lienzo" width=800 height=400></canvas>
+        <script>
+            var anchura = 800;
+            var altura = 400;
+            var lienzo = document.getElementById("lienzo");
+            var contexto = lienzo.getContext("2d");
+            contexto.fillStyle = "red"
+            contexto.fillRect(10,10,20,20)
+            
+            contexto.beginPath();
+            contexto.moveTo(anchura/2,altura/2)
+            contexto.arc(
+                anchura/2,
+                altura/2,
+                200,
+                0,
+                1
+            )
+            contexto.lineTo(anchura/2,altura/2)
+            contexto.fill()
+        </script>
+    </body>
+</html>

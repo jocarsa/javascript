@@ -1,0 +1,17 @@
+{"usuarios":[
+    {
+        "nombre":"Jose Vicente",
+        "telefono":"53535",
+        "email":"info@josevicente.com"
+    },
+    {
+        "nombre":"Juan",
+        "telefono":"53543",
+        "email":"info@juan.com"
+    },
+    {
+        "nombre":"Jorge",
+        "telefono":"645646",
+        "email":"info@jorge.com"
+    }
+]}
