@@ -1,0 +1,25 @@
+ la estructura de control condicional y vas a su validación, en la premisa de que la respuesta a una pregunta de validación, o a una expresión, es un verdadero o falso.
+
+Sin embargo, en cierta forma, hay muchas preguntas en la vida diaria que no responden a verdadero o falso.
+
+Un ejemplo sería preguntarle a una persona cuál es el día de la semana en el que nos encontramos.
+
+La respuesta a esa pregunta no es solo verdadero o falso, sino que hay siete casos que serían verdaderos, lunes, martes, miércoles, jueves, viernes, sábado, domingo, y otros muchísimos casos que no serían varios.
+
+Desde un punto de vista interno, desde hace muchos años siempre se ha debatido que la estructura de control switch, realmente equivale a preguntar:
+
+Es cierto que hoy es lunes
+Es cierto que es martes
+Es cierto que hoy es miércoles
+Hoy es cierto que es jueves
+Y así con cada uno de los días
+
+Por lo tanto, la estructura de control switch nos permite, como podemos ver ilustrado en el ejemplo, a continuación, realizar una validación donde la respuesta no es, necesariamente, verdadera o falsa, sino que puede ser un número, o bien una cadena.
+
+La estructura de control es un poco especial desde el punto de vista en el que cada uno de los casos viene delimitado por:
+
+A continuación de los dos puntos, encontramos todo el código que se ejecutará en el caso de que ese caso sea cierto.
+
+Debemos recordar cerrar cada uno de los casos con una instrucción Vray.
+
+Por último, tenemos un caso de FORT, que se ejecutará únicamente en el caso de que ninguno de los casos superiores verdaderos sean correctos. 
