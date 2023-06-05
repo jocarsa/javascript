@@ -1,0 +1,19 @@
+ JavaScript es un lenguaje de programación relativamente tolerante a fallos, especialmente si lo comparamos con otros lenguajes de programación más estrictos.
+
+Por lo tanto, existen una serie de reglas de sintaxis que debemos cumplir, pero, sin embargo, el comportamiento por defecto de la gran mayoría de navegadores web, consiste en perdonarnos algunos errores, en el caso de que sean leves, y en el caso de que el intérprete, pese a la existencia de ese error, pueda interpretar correctamente nuestro código fuente.
+
+Sin embargo, existe una opción mediante la cual, usando una cadena de caracteres al principio del documento, podemos indicarle al navegador web que debe interpretar el código de forma estricta.
+
+Tal cadena de caracteres tiene el siguiente aspecto.
+
+Si no introducimos esa cadena, y por ejemplo olvidamos declarar el identificador de una variable, en ese caso la mayoría de los intérpretes de los navegadores web perdonaron ese error y ejecutará el código igualmente.
+
+Sin embargo, si especificamos y queremos utilizar una versión estricta de JavaScript, el programa se detendrá ante cualquier error que pueda surgir.
+
+En principio podría parecer que es conveniente que el intérprete sea permisivo, y que nos pueda perdonar y corregir automáticamente aquellos errores que podamos corregir.
+
+Si vienes tú puede resultar cierto para proyectos pequeños, para proyectos grandes, cada pequeño error que comentamos, podrá ser acumulado, hasta generar un error tan grande que no puedo hacer arreglado automáticamente por parte del intérprete.
+
+Es por esto que en ciertas ocasiones, se recomienda utilizar el modo estricto para obligarnos a escribir sintáctica mente de forma correcta nuestro código fuente, a fin de que, cuando el proyecto crezca, no contenga errores que, llegado un momento, puedan salir a la superficie, y arruina ROS, el desarrollo informático.
+
+Para el resto del trabajo en esta publicación, sin embargo, no se utilizará el modo estricto, sino que se utilizará el modo estándar de JavaScript en el navegador. 
