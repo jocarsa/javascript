@@ -6,6 +6,8 @@ Por lo tanto, en este caso, vamos a mostrar los dos tipos de comentarios que vam
 
 Por una parte, encontraremos el comentario de una única línea, que viene iniciado por dos barras.
 
+--// Esto es un comentario de una única línea
+
 De esta forma, todo el texto que se encuentre a la derecha de esas dos barras, ya está encontrado el siguiente salto de línea, se considerará un comentario.
 
 Eso quiere decir que no saldrá representado en ningún momento en ninguna parte del navegador, sino que será un texto Que únicamente podrá leer un ser humano.
@@ -13,6 +15,11 @@ Eso quiere decir que no saldrá representado en ningún momento en ninguna parte
 Dentro del mismo ejemplo, podremos comprobar que, a continuación, he introducido un comentario multilínea.
 
 La Pareja de caracteres que arranca un comentario multilínea es la barra ir*, y la pareja de caracteres que terminar un comentario multilínea es el*y la barra.
+
+--/* 
+--                Esto es un comentario de múltiples líneas
+--                Y esto es otra línea
+--            */
 
 De esta forma, todo el texto que se encuentre entre esa pareja de caracteres de apertura y de cierre, independientemente de cuántas líneas tenga y de cuantos saltos de línea tenga, se considerará como un comentario, y no se interpretará como si fuera código fuente.
 

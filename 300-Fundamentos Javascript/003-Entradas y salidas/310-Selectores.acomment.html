@@ -16,6 +16,8 @@ Esto nos permite especificar exactamente el elemento HTML dentro del cual querem
 
 a continuación, especificamos que queremos hacer referencia a la propiedad en el HTML, o lo que es lo mismo, al contenido HTML, que existe dentro de ese selector.
 
+--document.getElementById("mielemento").innerHTML = "Hola mundo"
+
 Utilizaremos a continuación un operador de asignación, representado por el signo igual, y por último, estableceremos la cadena que queremos representar dentro de dicho selector, que en este caso será " hola mundo "
 
 Si ejecutamos el código, podremos comprobar como hemos podido introducir una cadena de texto dentro de un selector específico, lo cual aumenta enormemente nuestro control acerca del documento HTML desde el lenguaje de programación JavaScript.
@@ -24,9 +26,13 @@ De la misma forma que es posible seleccionar un elemento mediante su identificad
 
 Por eso, en el ejemplo que se muestra a continuación, vemos cómo podemos seleccionar varias etiquetas mediante su nombre de etiqueta, para a continuación mostrar cuál es su longitud en la consola. Para este ejemplo, su longitud será igual a tres.
 
+--var etiquetas = document.getElementsByTagName("article")
+
 Por último, veremos que también es posible obtener la longitud de etiquetas dentro de este documento que contienen una clase determinada, para, a continuación, volver a mostrar su longitud en pantalla.
 
 La propiedad longitud, dentro de un conjunto de datos, consiste en conocer la enumeración de los elementos que tenemos dentro de ese selector.
+
+--console.log(etiquetas.length)
 
 Para este ejemplo, es totalmente normal que el resultado de pantalla sea tres y tres, ya que es cierto que tenemos, tanto tres artículos, como tres secciones cuya clase es " mi sección "
 

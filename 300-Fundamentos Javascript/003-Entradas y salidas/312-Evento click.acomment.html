@@ -4,6 +4,8 @@ Para ello, voy a comentar, línea, línea, el ejercicio que vamos a encontrar en
 
 En primer lugar, vamos a crear una variable llamada botón, a la que le asignaremos el elemento del documento que tiene el identificador " púlsame " que, recordamos, que es el botón que hemos creado anteriormente.
 
+--var boton = document.getElementById("pulsame");
+
 Más adelante dentro de esta publicación, explicaremos con más detalle exactamente que es una variable, y que es, igualmente, el operador de asignación, representado por el =.
 
 Por otra parte, a continuación, una vez que hemos definido la variable botón, le asignaremos un evento llamado onclick.
@@ -14,11 +16,19 @@ La función que vamos a ejecutar, realizará el siguiente código.
 
 En primer lugar, sacará un mensaje por consola, para que comprobemos qué el código está funcionando correctamente hasta este momento, es decir, que la página web detecta la pulsación del botón.
 
+--console.log("Has hecho click en el botón");
+
 A continuación, introduciremos, en una variable, el selector del campo. Para ello, tomaremos el campo a través de su identificador, de la misma forma que anteriormente hemos sido capaces de seleccionar el botón.
+
+--var campo = document.getElementById("entrada");
 
 A continuación, crearemos un una variable valor, a la cual le asignaremos el valor del campo que hemos cogido en la línea anterior.
 
+--var valor = campo.value
+
 Y por último, para demostrar que todo lo que hemos hecho hasta el momento está funcionando correctamente, sacaremos el mensaje por pantalla.
+
+--console.log("Has introducido: "+valor)
 
 Si este código no funciona correctamente, podremos comprobar, como, All escribir código dentro de la entrada, y al pulsar el botón, el mismo texto que hayamos escrito dentro de la entrada, será el texto que aparezca dentro de la consola.
 
